@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Unbounded',sans-serif;
+  background:#0f0f0f;color:#f5f5f5;scroll-behavior:smooth}
+a{text-decoration:none;color:#ff0057}
+.btn{display:inline-block;background:#ff0057;color:#fff;
+     padding:.8rem 2rem;border-radius:6px;margin-top:1rem;border:none;cursor:pointer}
+header{display:flex;justify-content:space-between;align-items:center;
+       padding:1rem 2rem;background:#111;position:sticky;top:0;z-index:100}
+.logo{font-size:1.6rem;color:#ff0057}
+nav{display:flex;gap:1rem}
+nav button{background:none;border:none;color:#ccc;font-size:1rem;cursor:pointer}
+nav button:hover,nav a:hover{color:#ff0057}
+.hero{text-align:center;padding:6rem 2rem;background:linear-gradient(135deg,#1a1a1a,#111)}
+.hero h1{font-size:3rem;color:#ff0057;margin-bottom:1rem}
+.hero p{color:#ccc;font-size:1.2rem}
+.products{padding:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+          gap:2rem;background:#181818}
+.product{background:#222;padding:1rem;border-radius:8px;text-align:center;transition:.2s}
+.product:hover{transform:translateY(-4px)}
+.product img{width:100%;border-radius:6px}
+.product h3{margin:1rem 0 .5rem;color:#ff0057}
+.product p{color:#ccc;margin-bottom:1rem}
+.addBtn{background:#ff0057;border:none;color:#fff;padding:.5rem 1rem;border-radius:4px;cursor:pointer}
+.modal,.gate{position:fixed;top:0;left:0;width:100%;height:100%;
+             background:rgba(0,0,0,.85);display:flex;justify-content:center;align-items:center}
+.hidden{display:none}
+.modal-content,.gate-content{background:#1b1b1b;padding:2rem;border-radius:10px;
+                             width:90%;max-width:430px;text-align:center;position:relative}
+.close{position:absolute;top:10px;right:14px;font-size:1.6rem;cursor:pointer;color:#ff0057}
+#cartItems{max-height:300px;overflow-y:auto;text-align:left;margin:1rem 0}
+#cartItems p{display:flex;justify-content:space-between;margin:.5rem 0}
+input,textarea{width:100%;padding:.7rem;border:none;border-radius:4px;margin:.4rem 0;background:#333;color:#fff}
+textarea{resize:vertical;min-height:80px}
+.error{color:#ff3864;margin-top:.5rem}
+.success{color:#36ff80;margin-top:.5rem}
+.qr{width:220px;margin:1rem auto;display:block}
+footer{text-align:center;padding:1rem;background:#111;color:#666;margin-top:2rem}

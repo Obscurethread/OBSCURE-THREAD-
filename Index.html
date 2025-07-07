@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obscure Thread – Avant-Garde Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- PASSWORD GATE -->
+  <div id="passwordGate" class="gate hidden">
+    <div class="gate-content">
+      <h2>Enter Drop Password</h2>
+      <input id="gateInput" type="password" placeholder="Password" />
+      <button id="gateBtn">Enter</button>
+      <p id="gateError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Obscure&nbsp;Thread</div>
+    <nav>
+      <a href="#products">Shop</a>
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>WHERE THE&nbsp;AVANT-GARDE&nbsp;BLEEDS</h1>
+    <p>Next drop in <span id="countdown"></span></p>
+    <a href="#products" class="btn">Shop&nbsp;Now</a>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section id="products" class="products">
+    <div class="product" data-id="1" data-name="Black Tanktop" data-price="799">
+      <img src="https://via.placeholder.com/400x400?text=Tanktop" alt="Tanktop" />
+      <h3>Black Tanktop</h3>
+      <p>₹799</p>
+      <button class="addBtn">Add&nbsp;to&nbsp;Cart</button>
+    </div>
+
+    <div class="product" data-id="2" data-name="Gothic Hoodie" data-price="1299">
+      <img src="https://via.placeholder.com/400x400?text=Hoodie" alt="Hoodie" />
+      <h3>Gothic Hoodie</h3>
+      <p>₹1299</p>
+      <button class="addBtn">Add&nbsp;to&nbsp;Cart</button>
+    </div>
+
+    <!-- Copy-paste more <div class="product"> … </div> as needed -->
+  </section>
+
+  <!-- CART MODAL -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeCart" class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <hr />
+      <p>Total: ₹<span id="cartTotal">0</span></p>
+      <button id="checkoutBtn" class="btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- ORDER FORM MODAL -->
+  <div id="orderModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeOrder" class="close">&times;</span>
+      <h2>Order Details</h2>
+
+      <form id="orderForm">
+        <input required name="name"  type="text"  placeholder="Full&nbsp;Name" />
+        <input required name="email" type="email" placeholder="Email"       />
+        <input required name="phone" type="tel"   placeholder="Phone"       />
+        <textarea required name="address" placeholder="Shipping&nbsp;Address"></textarea>
+        <button type="submit" class="btn">Place&nbsp;Order</button>
+      </form>
+
+      <div id="upiSection" class="hidden">
+        <h3>Pay via UPI</h3>
+        <!-- Replace with your real QR -->
+        <img class="qr" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIj48cmVjdCB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iTW9ub3NwYWNlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiBmaWxsPSIjMDAwIj5VUEkgUVI8L3RleHQ+PC9zdmc+" alt="UPI QR" />
+        <p>or send to: <code>obscure@upi</code></p>
+        <a class="btn" href="upi://pay?pa=obscure@upi&pn=Obscure%20Thread&cu=INR">Open&nbsp;UPI&nbsp;App</a>
+      </div>
+
+      <p id="orderSuccess" class="success"></p>
+    </div>
+  </div>
+
+  <footer>&copy;&nbsp;2025 Obscure Thread. All&nbsp;Rights&nbsp;Reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
